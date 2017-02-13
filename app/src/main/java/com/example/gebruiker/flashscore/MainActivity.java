@@ -189,6 +189,30 @@ public class MainActivity extends AppCompatActivity {
             staking.setVisibility(View.VISIBLE);
 
         }
+        if (foulsA + foulsB >= 30) {
+            TextView staking = (TextView) findViewById(R.id.Textview_staking);
+            staking.setVisibility(View.VISIBLE);
+
+
+            findViewById(R.id.btnGoal1).setEnabled(false);
+            findViewById(R.id.btnOwnGoal1).setEnabled(false);
+            findViewById(R.id.btnfoul1).setEnabled(false);
+
+            findViewById(R.id.btnGoal2).setEnabled(false);
+            findViewById(R.id.btnOwnGoal2).setEnabled(false);
+            findViewById(R.id.btnfoul2).setEnabled(false);
+
+
+        } else {
+            findViewById(R.id.btnGoal1).setEnabled(true);
+            findViewById(R.id.btnOwnGoal1).setEnabled(true);
+            findViewById(R.id.btnfoul1).setEnabled(true);
+
+            findViewById(R.id.btnGoal2).setEnabled(true);
+            findViewById(R.id.btnOwnGoal2).setEnabled(true);
+            findViewById(R.id.btnfoul2).setEnabled(true);
+
+        }
 
 
     }
